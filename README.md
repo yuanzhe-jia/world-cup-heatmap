@@ -33,6 +33,8 @@ world-cup-heatmap/
 │   ├── drawer.js          # Drawer panel logic
 │   └── app.js             # Main application controller
 ├── README.md              # This file
+├── LICENSE                # MIT License
+└── .gitignore             # Git ignore rules
 ```
 
 ## Data Architecture
