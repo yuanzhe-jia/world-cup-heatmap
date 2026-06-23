@@ -1,0 +1,275 @@
+:root {
+  --bg-primary: #0A0A0F;
+  --bg-secondary: #1A1A2E;
+  --bg-surface: #14141F;
+  --text-primary: #FFFFFF;
+  --text-secondary: #A0A0B0;
+  --accent-gold: #C9A84C;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+.drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.drawer-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -480px;
+  width: 440px;
+  height: 100vh;
+  background-color: var(--bg-surface);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+  padding: 2rem;
+  box-shadow: -8px 0 40px var(--shadow);
+  z-index: 1001;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: none;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.drawer-close:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+}
+
+.drawer-content {
+  padding-top: 1rem;
+}
+
+.drawer-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.flag-emoji {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.country-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.country-stats {
+  margin-bottom: 1.75rem;
+}
+
+.stat-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.stat-value {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.stat-value.gold {
+  color: var(--accent-gold);
+}
+
+.titles-info {
+  background-color: rgba(201, 168, 76, 0.08);
+  border-left: 3px solid var(--accent-gold);
+  padding: 1rem;
+  margin-top: 0.75rem;
+  border-radius: 0 4px 4px 0;
+}
+
+.titles-label {
+  font-size: 0.85rem;
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.titles-years {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.history-section {
+  margin-top: 1.75rem;
+}
+
+.history-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.history-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--border-color);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  transition: background-color 0.2s ease;
+}
+
+.history-item:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.history-year {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  min-width: 48px;
+  text-align: center;
+}
+
+.history-host {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-finish {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  text-align: right;
+  min-width: 80px;
+}
+
+.history-finish.champion {
+  color: var(--accent-gold);
+}
+
+.history-finish.runners-up {
+  color: #B0B0C0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state-text {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    width: 100%;
+    max-width: 380px;
+    right: -380px;
+    padding: 1.5rem;
+  }
+
+  .flag-emoji {
+    font-size: 2.5rem;
+  }
+
+  .country-name {
+    font-size: 1.5rem;
+  }
+
+  .stat-row {
+    padding: 0.625rem 0;
+  }
+
+  .stat-label,
+  .stat-value {
+    font-size: 0.85rem;
+  }
+
+  .history-item {
+    padding: 0.75rem 0.875rem;
+    gap: 0.75rem;
+  }
+
+  .history-year {
+    font-size: 0.9rem;
+    min-width: 40px;
+  }
+
+  .history-host,
+  .history-finish {
+    font-size: 0.8rem;
+  }
+
+  .history-finish {
+    min-width: 60px;
+  }
+}
