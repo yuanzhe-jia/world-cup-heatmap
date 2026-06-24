@@ -118,7 +118,11 @@ function renderMap() {
       type: 'map',
       map: 'world',
       roam: true,
-      zoom: 1.2,
+      zoom: 1.5,
+      scaleLimit: {
+        min: 0.8,
+        max: 2.0
+      },
       center: [0, 20],
       data: heatmapData,
       nameMap: countryNameMapping,
