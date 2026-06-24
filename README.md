@@ -14,10 +14,10 @@ A single-page, lightweight web application that visualizes FIFA World Cup partic
 
 | Technology | Purpose | Rationale |
 |------------|---------|-----------|
-| **HTML/CSS/JavaScript** | Entire application | Lightweight, fast, no framework overhead |
-| **ECharts** | World map + heatmap rendering | Built-in world map support, native heatmap visualization, rich interactivity |
-| **Static JSON** | Data storage | Zero network latency, fully offline-capable |
-| **CSS3 + CSS Variables** | Theming | Easy dark theme implementation, maintainable code |
+| HTML/CSS/JavaScript | Entire application | Lightweight, fast, no framework overhead |
+| ECharts | World map + heatmap rendering | Built-in world map support, native heatmap visualization, rich interactivity |
+| Static JSON | Data storage | Zero network latency, fully offline-capable |
+| CSS3 + CSS Variables | Theming | Easy dark theme implementation, maintainable code |
 
 ## Project Structure
 
@@ -124,8 +124,8 @@ The country detail drawer features:
 
 | Strategy | Implementation |
 |----------|----------------|
-| **Lazy Loading** | ECharts and map data loaded after initial page render |
-| **CDN Caching** | ECharts library and GeoJSON served via CDN |
-| **Data Compression** | JSON data minified for smaller file size |
-| **Zero API Calls** | All data embedded, no network requests |
-| **CSS Animation** | Uses `transform` and `opacity` for GPU acceleration |
+| Lazy Loading | ECharts and map data loaded after initial page render |
+| CDN Caching | ECharts library and GeoJSON served via CDN |
+| Data Compression | JSON data minified for smaller file size |
+| Zero API Calls | All data embedded, no network requests |
+| CSS Animation | Uses `transform` and `opacity` for GPU acceleration |
