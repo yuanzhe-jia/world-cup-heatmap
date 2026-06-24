@@ -184,6 +184,9 @@ function renderMap() {
     }
     
     if (worldCupData.countries[countryName]) {
+      if (window.va) {
+        window.va('event', { name: 'Country Click', data: { country: countryName } });
+      }
       openDrawer(countryName);
     }
   });
