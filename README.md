@@ -107,7 +107,7 @@ The heatmap uses a continuous color gradient:
 |---------|-------|-----------|
 | Page Background | Deep Charcoal | `#0A0A0F` |
 | Map Base | Dark Gray-Blue | `#1A1A2E` |
-| Accent (Gold) | Gold | `#C9A84C` |
+| Accent | Gold | `#C9A84C` |
 | Primary Text | White | `#FFFFFF` |
 | Secondary Text | Light Gray | `#A0A0B0` |
 | Drawer Background | Dark Surface | `#14141F` |
@@ -118,7 +118,7 @@ The country detail drawer features:
 - **Trigger**: Click on any country in the map
 - **Animation**: 300ms slide-in from right edge
 - **Content**: Country flag, name, total appearances, first/last appearance, titles, and complete participation history
-- **Close**: Click background overlay or close button (✕)
+- **Close**: Click background overlay or close button
 
 ### Performance Optimization
 
