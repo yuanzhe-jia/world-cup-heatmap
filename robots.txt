@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://world-cup-heatmap-sigma.vercel.app/sitemap.xml

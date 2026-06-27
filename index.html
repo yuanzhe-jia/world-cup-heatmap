@@ -36,6 +36,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/drawer.css">
@@ -61,7 +62,13 @@
 
   <main class="main-content">
     <div id="map-container" class="map-container">
-      <div id="map" class="map"></div>
+      <div id="map" class="map" role="img" aria-label="World Cup participation heatmap showing 80+ nations from 1930 to 2026"></div>
+      <noscript>
+        <div style="padding: 2rem; color: #A0A0B0; text-align: center;">
+          <h2>World Cup Heatmap (1930-2026)</h2>
+          <p>This interactive visualization shows the FIFA World Cup participation history of over 80 nations from 1930 to 2026. The heatmap uses color intensity to represent each country's World Cup appearances, titles won, and tournament history. Click on any country to view detailed participation records including first appearance, last appearance, total appearances, and championships. Data source: FIFA Official Records.</p>
+        </div>
+      </noscript>
     </div>
 
   </main>
