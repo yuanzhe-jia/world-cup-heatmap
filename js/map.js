@@ -156,7 +156,7 @@ function renderMap() {
         textStyle: {
           color: '#FFFFFF',
           fontSize: 13,
-          fontFamily: 'Inter, sans-serif'
+          fontFamily: "'Playfair Display', Georgia, serif"
         },
         formatter: function(params) {
           let displayName = params.name;
