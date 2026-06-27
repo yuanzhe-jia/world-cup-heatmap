@@ -58,13 +58,7 @@ html, body {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.icon {
-  font-size: 1.8rem;
+  color: #C0C0D0;
 }
 
 .search-container {
@@ -170,10 +164,6 @@ html, body {
   .title {
     font-size: 1.1rem;
     letter-spacing: 0.02em;
-  }
-
-  .icon {
-    font-size: 1.4rem;
   }
 
   .search-container {
